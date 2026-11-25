@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:* https://*.gno.land; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Taletree: collaborative choose-your-own-adventure stories on gno.land. Read, branch, cheer and tip." />
+    <meta name="theme-color" content="#16120f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbf6ec" media="(prefers-color-scheme: light)" />
+    <title>Taletree</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/literata.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="#/" aria-label="Taletree home">
+          <img src="favicon.svg" alt="" width="36" height="36" />
+          <span>Taletree</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="#/" data-route="/">Library</a>
+          <a href="#/bards" data-route="/bard">Hall of fame</a>
+          <a href="#/new" data-route="/new">Start a tale</a>
+        </nav>
+        <div class="head-tools">
+          <span id="net" class="net" role="status"><span class="net-dot" aria-hidden="true"></span><span class="net-label">Connecting…</span></span>
+          <button id="theme-btn" class="icon-btn" type="button" aria-label="Change theme"></button>
+          <button id="wallet-btn" class="btn wallet" type="button">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7a2 2 0 0 1 2-2h13v4" /><path d="M3 7v11a2 2 0 0 0 2 2h15V9H5a2 2 0 0 1-2-2z" /><path d="M16 14.5h1" /></svg>
+            <span>How to write</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="wrap view" tabindex="-1">
+      <noscript><p class="state">Taletree needs JavaScript to read the chain. You can still read every tale in gnoweb.</p></noscript>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap foot-row">
+        <p>Taletree · stories written together on <a href="https://gno.land" target="_blank" rel="noopener noreferrer">gno.land</a> · <span id="year"></span></p>
+        <p class="muted">Reads straight from the chain. Writes only through your own wallet or key.</p>
+      </div>
+    </footer>
+
+    <div id="toasts" class="toasts" aria-live="polite"></div>
+
+    <dialog id="dialog" aria-labelledby="dialog-title">
+      <div class="dialog-card">
+        <div class="dialog-head">
+          <h2 id="dialog-title">Dialog</h2>
+          <button id="dialog-close" class="icon-btn" type="button" aria-label="Close">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12" /><path d="M18 6L6 18" /></svg>
+          </button>
+        </div>
+        <div id="dialog-body"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
