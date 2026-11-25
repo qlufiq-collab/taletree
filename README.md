@@ -18,6 +18,7 @@ a node and writes through the Adena wallet or a copy-ready `gnokey` command.
 ![A passage in the Taletree web app](docs/screenshots/web-desktop-dark-passage.png)
 
 - **Live on testnet (Onyx, chain `onyx-1`):** [`gno.land/r/g1k2u0zja7uyfwxfhsau8upj34tynmxkrzvwz35a/taletree/v0`](https://onyx.testnets.gno.land/r/g1k2u0zja7uyfwxfhsau8upj34tynmxkrzvwz35a/taletree/v0)
+- **Web app (GitHub Pages):** https://qlufiq-collab.github.io/taletree/ (the `gh-pages` branch is a copy of `web/`; refresh it with `git subtree push --prefix web origin gh-pages`)
 - **Demo video, web app (2 min 11 s):** [`docs/demo-web.mp4`](docs/demo-web.mp4): the library, reading a branch like a book, an ending, the canon, the hall of fame, then a new choice, a cheer and a tip signed for real with `gnokey` on a local chain.
 - **Demo video, gnoweb (90 s):** [`docs/demo.mp4`](docs/demo.mp4): the same story in gnoweb, writing from the Actions form.
 
